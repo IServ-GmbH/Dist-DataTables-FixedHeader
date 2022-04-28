@@ -427,9 +427,7 @@ $.extend( FixedHeader.prototype, {
 
 		// It isn't trivial to add a !important css attribute...
 		var importantWidth = function (w) {
-			itemDom.floating.attr('style', function(i,s) {
-				return (s || '') + 'width: '+w+'px !important;';
-			});
+			itemDom.floating.css('width', w + 'px');
 		};
 
 		// Record focus. Browser's will cause input elements to loose focus if
